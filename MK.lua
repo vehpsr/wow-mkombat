@@ -8,6 +8,8 @@
 	MK_Pack["MKOMBAT_COMBAT"] = {};
 	MK_Pack["MKOMBAT_POSITIVE"] = {};
 	MK_Pack["ENEMY_TARGET"] = {};
+	MK_Pack["MKOMBAT_PARRY"] = {};
+	MK_Pack["MKOMBAT_WIN"] = {};
 
 --  Name the pack. "This" will be typed to load the pack.
 	MK_Pack["NAME"] = "MKombat";
@@ -24,25 +26,25 @@
 	table.insert( MK_Pack["MKOMBAT_DEATH"], soundPath .. "URNTHING.wav" );
 	table.insert( MK_Pack["MKOMBAT_DEATH"], soundPath .. "WEAK.wav" );
 	table.insert( MK_Pack["MKOMBAT_DEATH"], soundPath .. "IOUS.wav" );
+	table.insert( MK_Pack["MKOMBAT_DEATH"], soundPath .. "homer.wav" );
+	table.insert( MK_Pack["MKOMBAT_DEATH"], soundPath .. "nelson.wav" );
 
 --  Played when TARGETS are detected. Either NPC, an enemy player, or duel request
-	MK_Pack["ENEMY_HIGH_TARGET"] = soundPath .. "TYM.wav";
 	table.insert( MK_Pack["ENEMY_TARGET"], soundPath .. "destiny.wav" );
+	table.insert( MK_Pack["ENEMY_TARGET"], soundPath .. "TYM.wav" );
+	table.insert( MK_Pack["ENEMY_TARGET"], soundPath .. "prepare.wav" );
 
 --  Played when CRITS are detected.  Currently it detects crits you do as well as others
 	table.insert( MK_Pack["MKOMBAT_POSITIVE"], soundPath .. "welldone.wav" );
 	table.insert( MK_Pack["MKOMBAT_POSITIVE"], soundPath .. "excelent.wav" );
 	table.insert( MK_Pack["MKOMBAT_POSITIVE"], soundPath .. "OUTSTAND.wav" );
-
---  Played when DODGES are detected.
-	MK_Pack["MKOMBAT_HDODGE"] = soundPath .. "punishhim.wav"; --hunter dodge
-	MK_Pack["MKOMBAT_DODGE"] = soundPath .. "evade.wav"; --other classes dodge
-	MK_Pack["MKOMBAT_WTDODGE"] = soundPath .. "punishhim.wav"; --warrior target dodge
-	MK_Pack["MKOMBAT_TDODGE"] = soundPath .. "punishhim.wav"; --other classes target dodge
+	table.insert( UT_Pack["MKOMBAT_POSITIVE"], soundPath .. "holyshit.wav" );
+	table.insert( UT_Pack["MKOMBAT_POSITIVE"], soundPath .. "wickedsick.wav" );
 
 --  Played when PARRYS are detected.
-	MK_Pack["MKOMBAT_RPARRY"] = soundPath .. "punishhim.wav" --rogue parry
-	MK_Pack["MKOMBAT_PARRY"] = soundPath .. "parry.wav"; --other classes parry
+	table.insert( MK_Pack["MKOMBAT_PARRY"], soundPath .. "punishhim.wav");
+	table.insert( MK_Pack["MKOMBAT_PARRY"] = soundPath .. "parry.wav");
+	table.insert( MK_Pack["MKOMBAT_PARRY"] = soundPath .. "evade.wav");
 
 --  Played when COMBO POINTS are detected. (5 combo point sound is same as "FINISH_THEM" wave above.)
 	MK_Pack["MKOMBAT_COMBO1"] = soundPath .. "combo1.mp3"; --1 combo point
@@ -54,18 +56,17 @@
 	table.insert( MK_Pack["MKOMBAT_COMBAT"], soundPath .. "mkedit.mp3" );
 	table.insert( MK_Pack["MKOMBAT_COMBAT"], soundPath .. "matrix.mp3" );
 	table.insert( MK_Pack["MKOMBAT_COMBAT"], soundPath .. "blade.mp3" );
+	table.insert( MK_Pack["MKOMBAT_COMBAT"], soundPath .. "brrutality.mp3" );
 
---  Flawless victory, you were not damaged
-	MK_Pack["FLAWLESS_WIN "] = soundPath .. "mk4flaw.wav";
-
---  Fatality - you killed the target after hearing the FINISH HIM sound
-	MK_Pack["FATALITY"] = soundPath .. "SKFATAL.wav";
-
---  Brutality - You killed the target with a crit after hearing the FINISH HIM sound 
-	MK_Pack["BRUTALITY"] = soundPath .. "skbrute.wav";
-
---  You killed your opponent
-	MK_Pack["SUPURB_VICTORY"] = soundPath .. "SUPURB.wav";
+--  victory/win
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "mk4flaw.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "SKFATAL.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "skbrute.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "SUPURB.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "godlike.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "dominating.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "unstoppable.wav" );
+	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "firstblood.wav" );
 
 --  Played when the AddOn is checked with "/mk"
 	MK_Pack["WELCOME_LOADED"] = soundPath .. "TYM.wav";

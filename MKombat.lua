@@ -84,7 +84,7 @@ function MKombat_OnEvent()
         -- initialize if we're not for some reason
         -- if we have a vaild target, its a player, and its an enemy
         healthFinishHim = false;
-        if( UnitName("target") and UnitIsPlayer("target") and UnitIsEnemy("player", "target") and UnitHealth("target") > 0) then
+        if( UnitName("target") and UnitIsEnemy("player", "target") and UnitHealth("target") > 0) then
             finishHim = false;
             healthFinishHim = false;
             tookDamage = false;
@@ -123,8 +123,7 @@ function MKombat_OnEvent()
 		
 		
       	if( GetComboPoints("Player") == 5 and not finishHim) then
-      		--  PLAY FINISH HIM!!!
-			MKombat_PlayFile( g_MKombat_Packs[MK_CurrentPack]["MKOMBAT_RPARRY"] );
+			MKombat_PlayRandom( "MKOMBAT_PARRY" );
 			finishHim = true;
 		elseif( GetComboPoints("Player") ~= 5 and finishHim) then
 			finishHim = false;
@@ -132,7 +131,7 @@ function MKombat_OnEvent()
       	
 	elseif( event == "PLAYER_REGEN_DISABLED") then
 		critLastHit = false;
-        if( UnitName("target") and UnitIsPlayer("target") and UnitIsEnemy("player", "target") and UnitHealth("target") > 0) then
+        if( UnitName("target") and UnitIsEnemy("player", "target") and UnitHealth("target") > 0) then
             finishHim = false;
             healthFinishHim = false;
             healthOneShot = false;
@@ -152,22 +151,8 @@ function MKombat_OnEvent()
         local value = string.sub( arg1, 0, index-1 );
         -- if we have a name
         if( value and value==lastTarget) then
-			if( not tookDamage ) then
-				MKombat_PlayFile( g_MKombat_Packs[MK_CurrentPack]["FLAWLESS_WIN"] );
-			elseif( finishHim and not blewit ) then
-				MKombat_PlayFile( g_MKombat_Packs[MK_CurrentPack]["FATALITY"] );
-			elseif( critLastHit ) then
-				MKombat_PlayFile( g_MKombat_Packs[MK_CurrentPack]["BRUTALITY"] );
-			else
-				MKombat_PlayFile( g_MKombat_Packs[MK_CurrentPack]["SUPURB_VICTORY"] );
-			end
+			MKombat_PlayRandom( "MKOMBAT_WIN" );
         end
-    elseif( event == "ZONE_CHANGED_NEW_AREA" ) then
-		local ZoneName = GetRealZoneText();
-		if( ZoneName ~= nil and ZoneName == "Un'Goro Crater" and MKombat_Vars["lotl"] ~= "disable" ) then
-		    MKombat_Msg("|cffff3333 Land of the Lost theme song brought to you by MKombat sound mod!  You can disable it by typing /mkombat lotl disable, or enable to turn it on");
-			MKombat_PlayFile( "Interface\\AddOns\\MKombat\\Sounds\\lotl.mp3" );
-		end
     elseif( event == "VARIABLES_LOADED" ) then
 		--
 		--  Load the primay pack
