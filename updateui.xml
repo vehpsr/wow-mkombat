@@ -1,0 +1,13 @@
+<Addon name="MKombat" author="Cooper Sellers" email="rollie@warcraftrealms.com" url="http://www.warcraftrealms.com">
+    <Description>
+        This is a sound only mod. It is currently build only for PVP but I may add in PVE support in the future. 
+        Basically this mod will play sounds from the arcade fighter Mortal Kombat during PVP encounters. 
+        When you target a player of the opposing faction, you will hear 'CHOOSE YOUR DESTINY'. 
+        If you initiate combat with the player, you will hear an edited version of the Mortal Kombat theme song. The song is set to not play more than once in any 10 minute period. Also, the song will play if combat is initiated with you by an opposing faction. This has the bonus of letting you know immediately if you are attacked by someone you hadn't already noticed. 
+        When your target gets to 20% health, you will hear the 'FINISH HIM' clip. If you manage to kill the target on the next hit, you will hear 'FATALITY', and if you happen to get a crit on that final blow, you will hear 'BRUTALITY'. 
+        If you are a rogue, you will also hear the 'FINISH HIM' anytime you accumulate 5 combo points (even in PVE). I left this in for PVE as I found it useful! 
+        There are some other sound bites included with this mod, but I'll let you find the rest for yourself! 
+    </Description>
+    <CurrentVersion ver="1.0" />
+    <UpdateFile url="http://www.warcraftrealms.com/mods/updateui.xml" />
+</Addon>
