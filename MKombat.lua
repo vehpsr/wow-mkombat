@@ -16,7 +16,7 @@ local blewit = false;
 local critLastHit = false;
 local lastMusicPlay = 0;
 local lastPraisePlay = 0;
-local songTimeout = 300;  --  this is in seconds, change this to lower number to play music more often
+local songTimeout = 360;  --  this is in seconds, change this to lower number to play music more often
 local praiseTimeout = 30;
 MK_CurrentPack = 1;
 local newPack = 1;
@@ -47,8 +47,6 @@ function MKombat_OnLoad()
 	this:RegisterEvent("PLAYER_REGEN_DISABLED");
 	this:RegisterEvent("PLAYER_TARGET_CHANGED");
 	this:RegisterEvent("CHAT_MSG_COMBAT_HOSTILE_DEATH");
-	
-	this:RegisterEvent( "ZONE_CHANGED_NEW_AREA" );
 	
 	this:RegisterEvent( "VARIABLES_LOADED" );
 	

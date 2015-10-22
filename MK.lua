@@ -38,8 +38,6 @@
 	table.insert( MK_Pack["MKOMBAT_POSITIVE"], soundPath .. "welldone.wav" );
 	table.insert( MK_Pack["MKOMBAT_POSITIVE"], soundPath .. "excelent.wav" );
 	table.insert( MK_Pack["MKOMBAT_POSITIVE"], soundPath .. "OUTSTAND.wav" );
-	table.insert( UT_Pack["MKOMBAT_POSITIVE"], soundPath .. "holyshit.wav" );
-	table.insert( UT_Pack["MKOMBAT_POSITIVE"], soundPath .. "wickedsick.wav" );
 
 --  Played when PARRYS are detected.
 	table.insert( MK_Pack["MKOMBAT_PARRY"], soundPath .. "punishhim.wav");
@@ -67,6 +65,14 @@
 	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "dominating.wav" );
 	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "unstoppable.wav" );
 	table.insert( MK_Pack["MKOMBAT_WIN"], soundPath .. "firstblood.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "holyshit.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "wickedsick.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "headshot.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "ludicrouskill.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "monsterkill.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "multikill.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "rampage.wav" );
+	table.insert( UT_Pack["MKOMBAT_WIN"], soundPath .. "ultrakill.wav" );
 
 --  Played when the AddOn is checked with "/mk"
 	MK_Pack["WELCOME_LOADED"] = soundPath .. "TYM.wav";
