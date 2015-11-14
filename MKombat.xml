@@ -3,7 +3,6 @@
 
 <Script file="MK.lua" />
 
-
     <Frame name="MKombat_Frame">
         <Scripts>
             <OnLoad>
