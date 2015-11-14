@@ -2,9 +2,7 @@
 <Script file="MKombat.lua"/>
 
 <Script file="MK.lua" />
-<Script file="UT.lua" />
-<Script file="AP.lua" />
-<Script file="SW.lua" />
+
 
     <Frame name="MKombat_Frame">
         <Scripts>
